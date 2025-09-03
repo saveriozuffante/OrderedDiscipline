@@ -1,0 +1,9 @@
+services:
+  fileagent:
+    build: .
+    ports:
+      - "8787:8787"
+    environment:
+      AGENT_TOKEN: dev-token
+    volumes:
+      - ./workspace:/workspace
