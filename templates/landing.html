@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Share from your laptop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      :root {
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        color-scheme: light dark;
+        background-color: #0f172a;
+        color: #e2e8f0;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+      }
+
+      .card {
+        background: rgba(15, 23, 42, 0.9);
+        border: 1px solid rgba(148, 163, 184, 0.2);
+        border-radius: 24px;
+        padding: 2.5rem;
+        max-width: 480px;
+        text-align: center;
+        box-shadow: 0 30px 40px rgba(15, 23, 42, 0.45);
+      }
+
+      h1 {
+        font-size: clamp(1.6rem, 2.4vw, 2.2rem);
+        margin-bottom: 1rem;
+      }
+
+      p {
+        color: #cbd5f5;
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
+      }
+
+      .qr-wrapper {
+        display: inline-flex;
+        padding: 1rem;
+        background: rgba(226, 232, 240, 0.1);
+        border-radius: 20px;
+      }
+
+      img.qr {
+        display: block;
+        width: 240px;
+        height: 240px;
+      }
+
+      .url {
+        margin-top: 1.5rem;
+        font-size: 0.95rem;
+        font-family: "JetBrains Mono", "SFMono-Regular", ui-monospace, monospace;
+        word-break: break-all;
+        color: #94a3b8;
+      }
+
+      footer {
+        margin-top: 2rem;
+        font-size: 0.75rem;
+        color: rgba(148, 163, 184, 0.75);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="card">
+      <h1>Scan to open your laptop</h1>
+      <p>Point your phone camera at the QR code or type the URL below to connect instantly.</p>
+      <div class="qr-wrapper">
+        <img class="qr" src="{{ qr_image }}" alt="QR code for {{ share_url }}" />
+      </div>
+      <div class="url">{{ share_url }}</div>
+      <footer>Update the <code>SHARE_URL</code> env var to override this link.</footer>
+    </main>
+  </body>
+</html>
