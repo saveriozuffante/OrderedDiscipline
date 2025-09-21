@@ -1,0 +1,8 @@
+# Example configuration for a named Cloudflare Tunnel.
+ingress:
+  - hostname: share.example.com
+    service: http://localhost:8000
+  - service: http_status:404
+
+warp-routing:
+  enabled: false
