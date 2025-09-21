@@ -1,0 +1,10 @@
+{
+  "name": "sphere-council-wallet",
+  "version": "0.1.0",
+  "description": "Sovereign multi-chain wallet prototype",
+  "scripts": {
+    "test": "node -e \"console.log('No tests yet')\"",
+    "build": "echo 'build step not implemented'"
+  },
+  "license": "CC0-1.0"
+}
